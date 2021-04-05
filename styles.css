@@ -1,0 +1,37 @@
+/* 
+    Convención de estilos
+    1. Posicionamiento
+    2. Modelo de caja (box model, margin, padding, width, height)
+    3. Tipografia (fuente, tamaños, tipo)
+    4. Visuales (shadow-box, border-radius, etc)
+    5. Otros (Miscelaneos)
+*/
+
+:root{
+    /* Colores */
+    --bitcoin-orange: #F7931A;
+    --soft-orange :#FFE9D5;
+    --secondary-blue: #1A9AF7;
+    --soft-blue: #E7F5FF;
+    --warm-black: #201E1C;
+    --black: #282623;
+    --grey:#BABABA;
+    --off-white:#FAF8F7;
+    --white:#FFF;
+}
+
+* {    
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-size: 62.5%;;/* para usar medidas rem*/
+    font-family: 'DM Sans', sans-serif;
+}
+
+
+
+
+
