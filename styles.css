@@ -5,6 +5,21 @@
     3. Tipografia (fuente, tamaños, tipo)
     4. Visuales (shadow-box, border-radius, etc)
     5. Otros (Miscelaneos)
+
+    Usar metodología BEM para nombrar clases
+
+    BEM = Bloque > Element > Modificador
+
+    <main class="main"> <!-- Bloque main, section, article, div-->
+        <p class="main__titulo"></p> <!--Elemento a, p, span-->
+        <p class="main__descripcion"></p>
+
+        <a href="" class="main__botton"></a> 
+        <a href="" class="main__botton--rojo"></a> <!-- con modifiadores parecido al main_botton pero en rojo-->        
+    </main>
+
+    Tutorial: https://platzi.com/tutoriales/2008-html-css/7858-bem-la-mejor-manera-de-nombrar-tus-clases-de-html/
+
 */
 
 :root{
@@ -496,4 +511,99 @@ main {
     font-weight: 500;
     line-height: 1.8rem;
     color: #757575;
+}
+
+/** cards de planes **/
+.plans-container--slider {
+    display: flex;
+    /* gap: 10px; nueva funcionalidad para espaciado en flex*/
+    height: 316px;
+    /*Para generar un scroll horizontal*/
+    overflow-x: scroll; 
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x proximity;
+}
+
+.plans-container--card{
+    position: relative;
+    scroll-snap-align: center; /*Dentro de un scroll horizontal centra la vista del elemento*/
+    width:65%;
+    min-width: 190px;
+    max-width: 300px;
+    height: 250px;
+    margin: 50px 10px 0;
+    padding: 0 15px;
+    background-color: var(--just-white);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(89, 73, 30, 0.16);
+}
+
+.recomendado{
+    position: absolute;    
+    top: -15px;
+    left: calc(50% - 60px);
+    width: 120px;
+    height: 31px;    
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 6px;
+    background-color: var(--bitcoin-orange);
+    border-radius: 8px;
+    color: var(--just-white);
+}
+
+.plan-card--title{
+    padding-top: 30px;
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.8rem;
+    color:var(--black);
+}
+
+.plan-card--price{
+    position: relative;
+    padding: 5px 0;
+    font-family: 'Inter', sans-serif;
+    font-size: 5.2rem;
+    font-weight: bold;    
+    
+    line-height: 5.3rem;   
+    color: var(--black);
+}
+
+.plan-card--price span{
+    position: absolute;    
+    top: -10px;
+    text-indent: -10px;
+    font-size: 1.2rem;
+    font-weight: 500;
+
+    
+}
+
+.plan-card--saving{
+    font-size: 1.2rem;
+    color:#757575
+}
+
+.plan-card--ca{
+    width: 150px;
+    height: 48px;
+    margin-top: 20px;
+    background-color: #FAF8F7;
+    border: 2px solid var(--bitcoin-orange);
+    border-radius: 4px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1.4rem;
+    font-weight: bold;
+    line-height: 1.8rem;
+    color: var(--black);    
+}
+
+.plan-card--ca span{
+    display:inline-block  ;
+    width: 20px;
+    height: 20px;
+    background-image: url(./assets/icons/orange-arrow-right.svg);
+    vertical-align: text-bottom;
 }
