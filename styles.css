@@ -1,5 +1,5 @@
 /* 
-    Convención de estilos
+    Convención para escribir estilos
     1. Posicionamiento
     2. Modelo de caja (box model, margin, padding, width, height)
     3. Tipografia (fuente, tamaños, tipo)
@@ -93,7 +93,7 @@ header img {
     font-size: 1.4rem;
     font-weight: bold;
     text-decoration: none;
-    color:var(--black);    
+    color:var(--black);
 }
 
 .header--button span{
