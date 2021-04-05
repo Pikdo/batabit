@@ -531,7 +531,7 @@ main {
     min-width: 190px;
     max-width: 300px;
     height: 250px;
-    margin: 50px 10px 0;
+    margin: 50px 5px 0;
     padding: 0 15px;
     background-color: var(--just-white);
     border-radius: 8px;
@@ -606,4 +606,36 @@ main {
     height: 20px;
     background-image: url(./assets/icons/orange-arrow-right.svg);
     vertical-align: text-bottom;
+}
+/** Sección de footer */
+
+footer{
+    display: flex;
+    width: 100%;
+    height: 150px;
+    background-color: var(--bitcoin-orange);
+}
+
+footer section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+
+.left ul {
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.8rem;
+    list-style: none;
+    margin-left: 65px;
+}
+
+.left li {
+    padding: 5px 0;
+}
+
+.left a{
+    text-decoration: none;
+    color: var(--just-white);
 }
