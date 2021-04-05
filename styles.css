@@ -29,6 +29,7 @@
 html{
     font-size:62.5%;/* para usar medidas rem*/
     font-family: 'DM Sans', sans-serif;
+    scroll-behavior: smooth; /*Para crear una smooth scrolling*/
 }
 
 header{
@@ -268,7 +269,7 @@ main {
     width: 70%;
     min-width: 235px;
     max-width: 500px;
-    height: 360px;
+    height: 250px;
     margin: 0 auto;
     font-family: 'Inter', sans-serif;
 }
@@ -400,7 +401,7 @@ main {
     width: 90%;
     min-width: 288px;
     max-width: 400px;
-    height: 150px;
+    min-height: 150px;
     margin: 15px auto;
     padding: 15px;
     background-color: var(--black);
@@ -446,4 +447,53 @@ main {
 
 .product-detail--card .check-circle{
     background-image: url(./assets/icons/check-circle.svg);
+}
+
+/** Sección de planes **/
+
+.bitcoin-img-container{
+    width: 100%;
+    min-width: 320px;
+    height: 50vh;
+    background: no-repeat center/cover url(./assets/imgs/bitcoinbaby2x.jpg); 
+    text-align: center;
+}
+
+.bitcoin-img-container h2 {
+    padding-top: 60px;
+    font-size: 2.4rem;
+    font-weight: bold;
+    line-height: 2.6rem;
+    color: var(--just-white);    
+}
+
+.main-plans-container{
+    width: 100%;
+    min-width: 320px;
+    padding-bottom: 70px;
+    text-align: center;
+}
+
+.plans--title{
+    width: 90%;
+    min-width: 288px;
+    height: auto;
+    margin: 0 auto;
+    padding-bottom: 30px;
+}
+
+.plans--title h2{
+    padding-top: 50px;
+    font-size: 2.4rem;
+    font-weight: bold;
+    line-height: 2.6rem;
+    color: var(--black);
+}
+
+.plans--title p{
+    padding-top: 20px;
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.8rem;
+    color: #757575;
 }
