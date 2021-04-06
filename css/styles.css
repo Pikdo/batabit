@@ -1,6 +1,9 @@
 /* 
-    Convención para escribir estilos
-    1. Posicionamiento
+    MOBILE FIRST - Empezamos desde width 320px,
+
+
+    CONVENCIONES para escribir estilos
+    1. Posicionamiento (position,, display top, left)
     2. Modelo de caja (box model, margin, padding, width, height)
     3. Tipografia (fuente, tamaños, tipo)
     4. Visuales (shadow-box, border-radius, etc)
@@ -20,6 +23,9 @@
 
     Tutorial: https://platzi.com/tutoriales/2008-html-css/7858-bem-la-mejor-manera-de-nombrar-tus-clases-de-html/
 
+    LIGTHHOUSE
+
+    Herramienta para realizar un análisis de producto web
 */
 
 :root{
@@ -117,7 +123,7 @@ header img {
     width: 13px;
     height: 8px;
     margin-left: 10px;
-    background-image: url('./assets/icons/down-arrow.svg');
+    background-image: url('../assets/icons/down-arrow.svg');
 }
 
 
@@ -129,22 +135,12 @@ main {
     background-color: var(--off-white);
 }
 
-.main-tables-container{
-    display: flex;   
-    height: 316px;
-    /*Para generar un scroll horizontal de tables*/
-    overflow-x: scroll; 
-    overscroll-behavior-x: contain;
-    scroll-snap-type: x proximity;
-}
-
 .main-exchange-container{
     width: 100%;
-    height: auto;
-    scroll-snap-align: center;
+    height: auto;    
     padding-top: 80px;
     padding-bottom: 30px;
-    text-align: center;
+    text-align: center;   
 }
 
 .main-exchange-container--title{
@@ -159,7 +155,7 @@ main {
     height: 200px;
     margin: 0 auto;
     margin-bottom: 50px;
-    background-image: url(./assets/imgs/Bitcoin.svg);
+    background-image: url(../assets/imgs/Bitcoin.svg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -181,7 +177,22 @@ main {
     color:#757575;
 }
 
-/** tabla currency ******/ 
+/** tablas currency ******/ 
+.main-tables-container{
+    display: flex;
+    
+
+    /*height: 250px;*/
+    /*Para generar un scroll horizontal de tables*/
+    overflow-x: scroll; 
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x proximity;
+
+    /*gap: 20px;*/ /*nueva funcionalidad para espaciado en flex*/
+    margin: 0 45px;
+}
+
+
 .main-currency-table {
     width: 70%;
     min-width: 235px;
@@ -189,6 +200,7 @@ main {
     height: 250px;
     margin: 0 auto;
     font-family: 'Inter', sans-serif;
+    scroll-snap-align: center;
 }
 
 .main-currency-table .currency-table--title{
@@ -255,7 +267,7 @@ main {
     width: 15px;
     height: 15px;
     margin-left: 10px;
-    background-image: url(./assets/icons/trending-down.svg);
+    background-image: url(../assets/icons/trending-down.svg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -266,7 +278,7 @@ main {
     width: 15px;
     height: 15px;
     margin-left: 10px;
-    background-image: url(./assets/icons/trending-up.svg);
+    background-image: url(../assets/icons/trending-up.svg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -297,7 +309,7 @@ main {
     height: 250px;
     margin: 0 auto;
     font-family: 'Inter', sans-serif;
-    scroll-snap-align: center;
+    scroll-snap-align: end;
 }
 
 .main-comission-table .comission-table--title{
@@ -393,7 +405,7 @@ main {
     left: calc(50% - 20px); /*Calcular la posicion o usar flex*/
     width: 40px;
     height: 25px;
-    background-image: url(./assets/icons/batata.svg);        
+    background-image: url(../assets/icons/batata.svg);        
 }
 
 .product-detail--title{
@@ -460,19 +472,19 @@ main {
 }
 
 .product-detail--card .clock{
-    background-image: url(./assets/icons/clock.svg);
+    background-image: url(../assets/icons/clock.svg);
 }
 
 .product-detail--card .eye{
-    background-image: url(./assets/icons/eye.svg);
+    background-image: url(../assets/icons/eye.svg);
 }
 
 .product-detail--card .dolar-sign{
-    background-image: url(./assets/icons/dollar-sign.svg);
+    background-image: url(../assets/icons/dollar-sign.svg);
 }
 
 .product-detail--card .check-circle{
-    background-image: url(./assets/icons/check-circle.svg);
+    background-image: url(../assets/icons/check-circle.svg);
 }
 
 /** Sección de planes **/
@@ -481,7 +493,7 @@ main {
     width: 100%;
     min-width: 320px;
     height: 50vh;
-    background: no-repeat center/cover url(./assets/imgs/bitcoinbaby2x.jpg); 
+    background: no-repeat center/cover url(../assets/imgs/bitcoinbaby2x.jpg); 
     text-align: center;
 }
 
@@ -526,13 +538,24 @@ main {
 
 /** cards de planes **/
 .plans-container--slider {
-    display: flex;
-    /* gap: 10px; nueva funcionalidad para espaciado en flex*/
+    display: flex;    
     height: 316px;
     /*Para generar un scroll horizontal*/
     overflow-x: scroll; 
+    overflow-y: hidden;
     overscroll-behavior-x: contain;
     scroll-snap-type: x proximity;
+   
+    gap: 10px; /*nueva funcionalidad para espaciado en flex*/
+    margin: 0 10px;
+}
+
+.plans-container--slider::-webkit-scrollbar {
+    background-color: var(--soft-orange);
+    height: 3px;
+  }
+.plans-container--slider::-webkit-scrollbar-thumb {
+    background-color: var(--bitcoin-orange);
 }
 
 .plans-container--card{
@@ -540,7 +563,7 @@ main {
     scroll-snap-align: center; /*Dentro de un scroll horizontal centra la vista del elemento*/
     width:65%;
     min-width: 190px;
-    max-width: 300px;
+    max-width: 250px;
     height: 250px;
     margin: 50px 5px 0;
     padding: 0 15px;
@@ -615,7 +638,7 @@ main {
     display:inline-block  ;
     width: 20px;
     height: 20px;
-    background-image: url(./assets/icons/orange-arrow-right.svg);
+    background-image: url(../assets/icons/orange-arrow-right.svg);
     vertical-align: text-bottom;
 }
 /** Sección de footer */
