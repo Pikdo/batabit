@@ -179,17 +179,20 @@ main {
 
 /** tablas currency ******/ 
 .main-tables-container{
-    display: flex;
-    
-
-    /*height: 250px;*/
+    display: flex;    
     /*Para generar un scroll horizontal de tables*/
     overflow-x: scroll; 
     overscroll-behavior-x: contain;
     scroll-snap-type: x proximity;
-
-    /*gap: 20px;*/ /*nueva funcionalidad para espaciado en flex*/
     margin: 0 45px;
+}
+
+.main-tables-container::-webkit-scrollbar {
+    background-color: var(--soft-orange);
+    height: 3px;
+}
+.main-tables-container::-webkit-scrollbar-thumb {
+    background-color: var(--bitcoin-orange);
 }
 
 
